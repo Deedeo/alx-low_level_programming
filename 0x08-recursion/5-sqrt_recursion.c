@@ -1,41 +1,29 @@
 #include "main.h"
 
 /**
- * is_squre_root - determines the square root of
- * @j: an input value
- * @i: input value
+ * sqrt2 - Makes possible to evaluate from 1 to n
+ * @a: same number as n
+ * @b: number that iterates from 1 to n
  *
- * Description: determines the square root
- * Return: returns the input val
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
-int is_sqrt2(int i, int j)
+int sqrt2(int a, int b)
 {
-	if (j * j > i)
-	{
+	if (b * b == a)
+		return (b);
+	else if (b * b > a)
 		return (-1);
-	}
-	if (j * j == i)
-	{
-		return (j);
-	}
-	return (is_sqrt2(i, j + 1));
+	return (sqrt2(a, b + 1));
 }
-
 /**
- * _sqrt_recursion - returns square root
- * @n: input size
+ * _sqrt_recursion - returns the natural square root of n
+ * @n: Number Integer
  *
- * Description: If n does not have a natural square root,
- * the function should return -1
- * Return: returns the natural square root of a number
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-	{
-		return (-1);
-	}
-	return (is_sqrt2(n, 1));
+	return (sqrt2(n, 1));
 }
