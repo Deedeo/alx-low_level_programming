@@ -9,7 +9,7 @@
  * Return: returns the input val
  */
 
-int is_square_root(int i, int j)
+int is_sqrt2(int i, int j)
 {
 	if (j * j > i)
 	{
@@ -19,7 +19,7 @@ int is_square_root(int i, int j)
 	{
 		return (j);
 	}
-	return (is_square_root(i, j + 1));
+	return (is_sqrt2(i, j + 1));
 }
 
 /**
@@ -37,5 +37,5 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (is_square_root(n, 1));
+	return (is_sqrt2(n, 1));
 }
