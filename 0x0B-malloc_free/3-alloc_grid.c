@@ -42,5 +42,4 @@ int **s, r, c;
 		}
 	}
 	return (s);
-
 }
